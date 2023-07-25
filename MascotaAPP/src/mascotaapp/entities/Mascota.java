@@ -7,7 +7,7 @@ public class Mascota {
     private String apodo;
     //conejo, gaot, perro, loro...
     private String tipo;
-    private int edad;
+    private Integer edad;
     private boolean cola;
     private String raza;
     private String color;
@@ -17,7 +17,7 @@ public class Mascota {
     public Mascota() {
     }
 
-    public Mascota(String nombre, String apodo, String tipo, int edad, boolean cola, String raza, String color, int energia) {
+    public Mascota(String nombre, String apodo, String tipo, Integer edad, boolean cola, String raza, String color, int energia) {
         this.nombre = nombre;
         this.apodo = apodo;
         this.tipo = tipo;
@@ -60,11 +60,11 @@ public class Mascota {
         this.tipo = tipo;
     }
 
-    public int getEdad() {
+    public Integer getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(Integer edad) {
         this.edad = edad;
     }
 
@@ -102,8 +102,12 @@ public class Mascota {
 
     @Override
     public String toString() {
-        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + '}';
+        return "Mascota{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + ", edad=" + edad + '}';
     }
+
+
+    
+    
     
     
 
