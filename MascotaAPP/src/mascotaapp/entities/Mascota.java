@@ -1,11 +1,13 @@
 package mascotaapp.entities;
 
+import java.util.Objects;
+
 public class Mascota {
 
     //Atributos
     private String nombre;
     private String apodo;
-    //conejo, gaot, perro, loro...
+    //conejo, gato, perro, loro...
     private String tipo;
     private Integer edad;
     private boolean cola;
@@ -99,6 +101,61 @@ public class Mascota {
     public void setEnergia(int energia) {
         this.energia = energia;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 47 * hash + Objects.hashCode(this.nombre);
+        hash = 47 * hash + Objects.hashCode(this.apodo);
+        hash = 47 * hash + Objects.hashCode(this.tipo);
+        hash = 47 * hash + Objects.hashCode(this.edad);
+        hash = 47 * hash + (this.cola ? 1 : 0);
+        hash = 47 * hash + Objects.hashCode(this.raza);
+        hash = 47 * hash + Objects.hashCode(this.color);
+        hash = 47 * hash + this.energia;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Mascota other = (Mascota) obj;
+        if (this.cola != other.cola) {
+            return false;
+        }
+        if (this.energia != other.energia) {
+            return false;
+        }
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        if (!Objects.equals(this.apodo, other.apodo)) {
+            return false;
+        }
+        if (!Objects.equals(this.tipo, other.tipo)) {
+            return false;
+        }
+        if (!Objects.equals(this.raza, other.raza)) {
+            return false;
+        }
+        if (!Objects.equals(this.color, other.color)) {
+            return false;
+        }
+        if (!Objects.equals(this.edad, other.edad)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
 
     @Override
     public String toString() {
