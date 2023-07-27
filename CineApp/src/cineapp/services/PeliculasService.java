@@ -20,7 +20,7 @@ public class PeliculasService {
         System.out.println("Ingresa la duracion");
         Double duracion = leer.nextDouble();
 
-        return new Peliculas(director, director, duracion);
+        return new Peliculas(nombre, director, duracion);
     }
 
     public void enlistarPeliculas() {
