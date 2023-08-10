@@ -1,6 +1,8 @@
 package mascotaapp.entities;
 
 import java.util.Objects;
+import mascotaapp.enumeraciones.Raza;
+import mascotaapp.enumeraciones.SexoAnimal;
 
 public class Mascota {
 
@@ -11,15 +13,16 @@ public class Mascota {
     private String tipo;
     private Integer edad;
     private boolean cola;
-    private String raza;
+    private Raza raza;
     private String color;
     private int energia;
+    private SexoAnimal sexo;
 
     //Constructores 
     public Mascota() {
     }
 
-    public Mascota(String nombre, String apodo, String tipo, Integer edad, boolean cola, String raza, String color, int energia) {
+    public Mascota(String nombre, String apodo, String tipo, Integer edad, boolean cola, Raza raza, String color, int energia) {
         this.nombre = nombre;
         this.apodo = apodo;
         this.tipo = tipo;
@@ -78,11 +81,11 @@ public class Mascota {
         this.cola = cola;
     }
 
-    public String getRaza() {
+    public Raza getRaza() {
         return raza;
     }
 
-    public void setRaza(String raza) {
+    public void setRaza(Raza raza) {
         this.raza = raza;
     }
 
@@ -101,6 +104,16 @@ public class Mascota {
     public void setEnergia(int energia) {
         this.energia = energia;
     }
+
+    public SexoAnimal getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(SexoAnimal sexo) {
+        this.sexo = sexo;
+    }
+    
+    
 
     @Override
     public int hashCode() {

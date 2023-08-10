@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import mascotaapp.enumeraciones.Raza;
 import mascotaapp.utilities.Comparadores;
 
 public class MascotaAPP {
@@ -67,10 +68,10 @@ public class MascotaAPP {
         //creo un array de mascotas y le agrego un par de elementos
         ArrayList<Mascota> masc1 = new ArrayList();
 
-        masc1.add(new Mascota("Fernando", "Pipo", "Perro", 8, true, "jnosidfg", "negro", 4));
-        masc1.add(new Mascota("Pepe", "Pepe", "Gato", 12, true, "jnosidfg", "negro", 4));
-        masc1.add(new Mascota("otro", "Pepe", "Gato", 1, true, "jnosidfg", "negro", 4));
-        masc1.add(new Mascota("otro2", "Pepe", "Gato", 5, true, "jnosidfg", "negro", 4));
+        masc1.add(new Mascota("Fernando", "Pipo", "Perro", 8, true, Raza.BEAGLE, "negro", 4));
+        masc1.add(new Mascota("Pepe", "Pepe", "Gato", 12, true, Raza.COCKER, "negro", 4));
+        masc1.add(new Mascota("otro", "Pepe", "Gato", 1, true, Raza.BORDER_COLLIE, "negro", 4));
+        masc1.add(new Mascota("otro2", "Pepe", "Gato", 5, true, Raza.SIN_RAZA, "negro", 4));
         //al mostrar aca se veran en el orden en el que fueron ingresados
 
         System.out.println("antes de usar el comparador");
@@ -156,7 +157,18 @@ public class MascotaAPP {
             System.out.println("Key: " + key + " Value: "+ value);
             
         }
+        
+        
+        //como recorrer un enum 
+        for (Raza raza : Raza.values()) {
+            System.out.println(raza);
+        }
+        //para usar en comparacion con dato de input se tiene que convertir el tipo de dato (ej .toString())
     }
+    
+        
+    
+    
     
     
     
